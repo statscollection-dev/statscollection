@@ -85,7 +85,7 @@ language = None
 exclude_patterns = []
 
 # The name of the Pygments (syntax highlighting) style to use.
-pygments_style = 'sphinx'
+pygments_style = "sphinx"
 
 html_show_sphinx = False
 
@@ -238,6 +238,7 @@ html_theme_options = {
     # "theme_project_logo": "_static/statscollection_logo.png",
 }
 
+
 def setup(app):
     # to hide/show the prompt in code examples:
-    app.add_javascript('js/copybutton.js')
+    app.add_javascript("js/copybutton.js")

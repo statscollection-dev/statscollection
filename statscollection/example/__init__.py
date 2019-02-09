@@ -18,3 +18,6 @@ An example function and an example class
 """
 
 from .example import operator_over_iterable, Sum
+
+operator_over_iterable = operator_over_iterable
+Sum = Sum

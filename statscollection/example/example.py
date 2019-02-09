@@ -5,7 +5,7 @@ The purpose of this module is to show how you can contribute.
 import operator
 
 
-def operator_over_iterable(arg, iterable, operator=operator.add):
+def operator_over_iterable(arg, iterable, binary_operator=operator.add):
     """
     One sentence describing what the function does.
 
@@ -21,7 +21,7 @@ def operator_over_iterable(arg, iterable, operator=operator.add):
         Any argument which is left-compatible with the binary operator.
     iterable : iterable
         An iterable of arguments right-compatible with the binary operator.
-    operator : operator
+    binary_operator : operator
         A binary operator, such as addition, or something else entirely.
 
     Yields
@@ -52,7 +52,7 @@ def operator_over_iterable(arg, iterable, operator=operator.add):
 
     """
     for item in iterable:
-        yield operator(item, arg)
+        yield binary_operator(item, arg)
 
 
 class Sum:

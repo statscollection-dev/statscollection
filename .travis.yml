@@ -22,7 +22,7 @@ matrix:
 
 # -------------------- install: install any dependencies required -------------
 before_install:
-  - sudo apt install libpython3.6-dev libpython3.7-dev;
+  - sudo apt install libpython-dev
   - uname --all # Print system information
   - python --version
 

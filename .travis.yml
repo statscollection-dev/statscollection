@@ -27,8 +27,8 @@ before_install:
   - python --version
 
 install:
-  - pip install black
-  - pip install pytest
+  - pip install -r requirements.txt
+  - pip list # List installed packages.
 
 
 # -------------------- script: run the build script ---------------------------
@@ -37,6 +37,7 @@ before_script:
 
 script:
   - python setup.py develop sdist # Install the package
+  - pip show statscollection
   - black . --check
   - pytest . --verbose --doctest-modules
 

@@ -1,0 +1,9 @@
+# The requirements file specifies packages needed for running, testing, linting
+# and so forth. The minimal requirements needed to run the package code is
+# found in `install_requires` in setup.py
+
+# For code formatting
+black
+
+# For running tests
+pytest

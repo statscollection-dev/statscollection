@@ -52,7 +52,7 @@ def operator_over_iterable(arg, iterable, operator=operator.add):
 
     """
     for item in iterable:
-        yield operator(arg, item)
+        yield operator(item, arg)
 
 
 class Sum:

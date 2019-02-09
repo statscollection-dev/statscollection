@@ -7,7 +7,7 @@
 Use [pip](https://pypi.org/project/statscollection/) to install Statscollection.
 
 ```bash
-pip install foobar
+pip install statscollection
 ```
 
 ## Features

@@ -18,7 +18,8 @@ matrix:
       python: '3.7'
 
 
-# The Travis CI job lifecycle: https://docs.travis-ci.com/user/job-lifecycle/
+# The Travis CI job lifecycle specifies the order of the commands below phases.
+# https://docs.travis-ci.com/user/job-lifecycle/#the-job-lifecycle
 
 # -------------------- install: install any dependencies required -------------
 before_install:
@@ -39,7 +40,9 @@ script:
   - python setup.py develop sdist # Install the package
   - pip show statscollection
   - black . --check
+  - flake8 . --select=F401 # unused imports
   - pytest . --verbose --doctest-modules
+  - sphinx-build doc/ html/
 
 
 # =============================================================================

@@ -5,7 +5,7 @@ setup(
     name="statscollection",
     version="0.0.1",
     description="A collection of statistical functions.",
-    long_description="A collection of statistical functions.",
+    long_description="A collection of packages for statistical analysis and modeling.",
     author="tommyod",
     author_email="tod001@uib.no",
     license="MIT",

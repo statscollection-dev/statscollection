@@ -2,8 +2,21 @@
 # and so forth. The minimal requirements needed to run the package code is
 # found in `install_requires` in setup.py
 
-# For code formatting
+# General requirements
+scipy
+numpy
+
+# For code formatting and linting
 black
+flake8
 
 # For running tests
 pytest
+
+# For building documentation
+sphinx
+sphinx-gallery
+
+# For creating plots in documentation
+matplotlib
+

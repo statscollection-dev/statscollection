@@ -39,7 +39,7 @@ def operator_over_iterable(arg, iterable, binary_operator=operator.add):
 
     A more invovled example showing what the function does.
 
-    >>> list(operator_over_iterable(2, sequence, operator=operator.pow))
+    >>> list(operator_over_iterable(2, sequence, binary_operator=operator.pow))
     [1, 4, 9]
 
     See [knuth]_.

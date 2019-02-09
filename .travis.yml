@@ -40,7 +40,7 @@ script:
   - python setup.py develop sdist # Install the package
   - pip show statscollection
   - black . --check
-  - flake8 . --select=F401 # unused imports
+  - flake8 statscollection --select=F401 # unused imports
   - pytest . --verbose --doctest-modules
   - sphinx-build doc/ html/
 

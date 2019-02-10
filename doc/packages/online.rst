@@ -1,5 +1,4 @@
 
-
 .. automodule:: statscollection.online
    :no-members:
    :no-inherited-members:

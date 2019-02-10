@@ -47,7 +47,6 @@ Table of contents
    contributing
    packages/online
    packages/example
-   api/modules
 
 
 Contributors

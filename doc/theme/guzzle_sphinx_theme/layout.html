@@ -10,6 +10,7 @@
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap.min.css', 1) }}" />
   <link rel="stylesheet" type="text/css" href="{{ pathto('_static/css/bootstrap-theme.min.css', 1) }}" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
   {{ super() }}
 {%- endblock %}
 
@@ -151,9 +152,14 @@
   });
 </script>
 <script type="text/javascript" src="{{ pathto('_static/js/bootstrap.js', 1)}}"></script>
+
+<!-- Place this tag in your head or just before your close body tag. -->
+<script async defer src="https://buttons.github.io/buttons.js"></script>
+
+
 {%- block footer_wrapper %}
   <div class="footer">
-    &copy; Copyright {{ copyright }}. Created using <a href="http://sphinx.pocoo.org/">Sphinx</a>.
+    &copy; Copyright {{ copyright }}.
   </div>
 {%- endblock %}
 {%- block ga %}

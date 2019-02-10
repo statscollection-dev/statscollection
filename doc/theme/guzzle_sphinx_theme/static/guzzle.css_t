@@ -6,7 +6,7 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 15px;
   color: #333;
   line-height: 1.5;
 }
@@ -18,7 +18,7 @@ body {
   border-right: 1px solid #e0e0e0;
   width: 300px;
   overflow: auto;
-  background: #fafafa;
+  background: #fff;
 }
 
 #right-column {
@@ -62,7 +62,7 @@ h1, h2, h3 {
 }
 
 h1 {
-  font-size: 38px;
+  font-size: 36px;
   padding: 10px 10px 10px 45px;
   margin: 20px 0 35px -45px;
   background-color: aliceblue;
@@ -71,24 +71,24 @@ h1 {
 }
 
 h2 {
-  font-size: 34px;
+  font-size: 32px;
   padding: .2em 0;
   border-bottom: 1px solid #ddd;
 }
 
 h3 {
   margin-top: 35px;
-  font-size: 28px;
+  font-size: 26px;
 }
 
 h4 {
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 h5 {
   margin-top: 25px;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 div.clearer {
@@ -112,7 +112,7 @@ p {
 }
 
 code, pre, tt {
-  font-size: 15px;
+  font-size: 14px;
   font-family: Consolas, monospace;
 }
 
@@ -125,10 +125,11 @@ tt {
 }
 
 code, pre {
-  line-height: 23px;
+  line-height: 20px;
   margin: 20px 0;
   word-wrap: normal;
   background-color: #fff;
+  padding: 0px;
 }
 
 pre {
@@ -136,11 +137,12 @@ pre {
   background-color: #fff;
   overflow: auto;
   border-width: 0 0 0 2px;
-  border-color: #eee;
+  border-color: #e6e6e6;;
   border-style: solid;
   padding: 14px 0 14px 20px;
   padding-right: 0;
   margin: 20px 0;
+  background-color: #edf0f2;
 }
 
 div.highlight {
@@ -160,7 +162,7 @@ dl.method {
 }
 
 .breadcrumb {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 12px;
   background: #fff;
 }
@@ -173,7 +175,7 @@ blockquote {
   color: #000;
   margin: 20px 0;
   padding: 15px 20px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Sphinx sidebar
@@ -201,7 +203,7 @@ div.sphinxsidebar h4 {
 }
 
 div.sphinxsidebar h4 {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 div.sphinxsidebar p {
@@ -289,7 +291,7 @@ div.sphinxsidebar input {
 
 .sidebar-block h2 {
   border-bottom: none;
-  margin: 0 0 17px 0;
+  margin: 3em 0 0 0;
   font-size: 14px;
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   padding: 0 0 6px 0;
@@ -351,6 +353,14 @@ div.sphinxsidebar input {
 /* Two-pane table list
 -------------------------------------------------- */
 
+td {
+  padding: 2px 4px 2px 4px;
+}
+
+td a {
+  padding: 2px 4px 2px 4px;
+}
+
 .table-bordered>thead>tr>th,
 .table-bordered>tbody>tr>th,
 .table-bordered>tfoot>tr>th,
@@ -365,7 +375,7 @@ table.two-column tbody td
   border: 0 0 1px 0 solid #eee;
   border-left: none;
   padding: 8px 4px;
-  font-size: 16px;
+  font-size: 15px;
 }
 
 table.two-column {
@@ -389,7 +399,7 @@ table.two-column {
   border-top: 1px solid #ccc;
   padding: 12px 45px;
   margin-top: 30px;
-  font-size: 24px;
+  font-size: 22px;
 }
 
 .rel-spacer {
@@ -401,7 +411,7 @@ table.two-column {
 
 div.footer {
   padding: 25px;
-  font-size: 14px;
+  font-size: 13px;
   color: #888;
   text-align: right;
   max-width: 1200px;
@@ -631,7 +641,7 @@ div.topic.contents > ul {
   margin: 0px 0 5px;
   padding: 0;
   font-weight: bold;
-  font-size: 18px;
+  font-size: 17px;
   line-height: 1.1;
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
@@ -898,7 +908,7 @@ span.eqno {
     margin-left: 0;
     width: 100%;
     padding: 10px;
-    font-size: 40px;
+    font-size: 38px;
   }
 
   #left-column {

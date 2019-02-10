@@ -1,7 +1,7 @@
 .. _contributing:
 
-Constributing
-=============
+Contributing
+============
 
 Expert knowledge is not needed to contribute to *statscollection*.
 Every contribution is valuable, including:

@@ -43,9 +43,11 @@ Table of contents
 .. toctree::
    :maxdepth: 2
 
+   self
    contributing
+   packages/online
    packages/example
-
+   api/modules
 
 
 Contributors

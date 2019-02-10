@@ -25,11 +25,11 @@ matrix:
 before_install:
   - sudo apt install libpython-dev
   - uname --all # Print system information
-  - python --version
+  - python --version # Print python information
 
 install:
   - pip install -r requirements.txt
-  - pip list # List installed packages.
+  - pip list # List installed packages
 
 
 # -------------------- script: run the build script ---------------------------
@@ -38,11 +38,11 @@ before_script:
 
 script:
   - python setup.py develop sdist # Install the package
-  - pip show statscollection
-  - black . --check
-  - flake8 statscollection --select=F401 # unused imports
-  - pytest . --verbose --doctest-modules
-  - sphinx-build doc/ html/
+  - pip show statscollection # Show information about the package
+  - black . --check # Check that code is formatted correctly w.r.t. black
+  - flake8 statscollection --select=F401 # Unused imports
+  - pytest . --verbose --doctest-modules # Run all tests
+  - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
 
 
 # =============================================================================

@@ -37,7 +37,7 @@ before_script:
   - echo 'before script.'
 
 script:
-  - pip install . # python setup.py develop sdist # Install the package
+  - pip install -e . # python setup.py develop sdist # Install the package
   - pip show statscollection # Show information about the package
   - black . --check # Check that code is formatted correctly w.r.t. black
   - flake8 statscollection --select=F401 # Unused imports

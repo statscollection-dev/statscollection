@@ -57,7 +57,22 @@ extensions = [
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
     "sphinx.ext.autosummary",
+    "sphinx_gallery.gen_gallery",
 ]
+
+
+# https://sphinx-gallery.readthedocs.io/en/latest/getting_started.html
+sphinx_gallery_conf = {
+    # path to your examples scripts
+    "examples_dirs": "../examples",
+    # path where to save gallery generated examples
+    "gallery_dirs": "auto_examples",
+    "doc_module": "statscollection",
+    "backreferences_dir": os.path.join("modules", "generated"),
+    "reference_url": {"statscollection": None},
+    "download_all_examples": False,
+}
+
 
 # http://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#generating-stub-pages-automatically
 autosummary_generate = True
@@ -229,7 +244,7 @@ html_theme_options = {
     # Set the name of the project to appear in the left sidebar.
     "project_nav_name": "statscollection",
     # Path to a touch icon
-    "touch_icon": "images/statscollection_logo.png",
+    "touch_icon": "images/logos/statscollection_logo.png",
 }
 
 

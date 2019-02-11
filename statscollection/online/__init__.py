@@ -41,7 +41,7 @@ Tutorial
 
 The classes in this module share a common api, illustrated in the following example.
 
-.. doctest::
+.. doctest:: python
 
     >>> from statscollection.online import Mean
     >>> mean = Mean().fit(2.0)  # Fit a single item
@@ -53,13 +53,18 @@ The classes in this module share a common api, illustrated in the following exam
 
 It's possible to...
 
-.. doctest::
+.. doctest:: python
 
     >>> for result in Mean().yield_from(iter([1.0, 3.0, 5.0])):
     ...     print(result)
     1.0
     2.0
     3.0
+    
+.. code-block:: python
+   
+    >>> print('hello world')
+    hello world
 
 
 

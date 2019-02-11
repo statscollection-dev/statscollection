@@ -47,6 +47,7 @@ Table of contents
    contributing
    packages/online
    packages/example
+   auto_examples/index
 
 
 Contributors

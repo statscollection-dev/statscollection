@@ -41,7 +41,7 @@ script:
   - pip show statscollection # Show information about the package
   - black . --check # Check that code is formatted correctly w.r.t. black
   - flake8 statscollection --select=F401 # Unused imports
-  - pytest . --verbose --doctest-modules # Run all tests
+  - pytest statscollection --verbose --doctest-modules # Run all tests
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
 
 

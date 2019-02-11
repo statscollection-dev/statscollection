@@ -158,7 +158,6 @@ def timetest(n):
     np.random.seed(123)
     random.seed(123)
     estimator = Sample(num_samples=n, replace=True)
-    import collections
     import time
 
     st = time.perf_counter()

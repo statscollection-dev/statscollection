@@ -36,9 +36,9 @@ smartquotes = True
 # e.g. for py:function directives. Default is True.
 add_module_names = True
 
-#html_logo = "images/statscollection_logo.png"
+# html_logo = "images/statscollection_logo.png"
 
-html_favicon = '_static/favicon.ico'
+html_favicon = "_static/favicon.ico"
 
 # -- General configuration ---------------------------------------------------
 
@@ -56,7 +56,7 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
-    "sphinx.ext.autosummary", 
+    "sphinx.ext.autosummary",
 ]
 
 # http://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#generating-stub-pages-automatically

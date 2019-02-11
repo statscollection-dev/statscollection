@@ -145,6 +145,14 @@ pre {
   background-color: #edf0f2;
 }
 
+code.download {
+  line-height: 20px;
+  margin: 0px 0;
+  word-wrap: normal;
+  background-color: #fff;
+  padding: 0px;
+}
+
 div.highlight {
   background-color: white;
 }

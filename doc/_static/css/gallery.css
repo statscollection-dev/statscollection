@@ -1,0 +1,20 @@
+div.sphx-glr-download {
+  width: 100%;
+}
+
+div.sphx-glr-footer {
+  text-align: inherit;
+}
+
+
+div.sphx-glr-download a {
+	background-color: #edf0f2;
+	background-image: linear-gradient(to bottom, #EDF0F2, #e6e6e6);
+	border-radius: 4px;
+	border: 1px solid #606078;
+	color: #000;
+	display: inline-block;
+	font-weight: bold;
+	padding: 0.5ex;
+	text-align: center;
+}

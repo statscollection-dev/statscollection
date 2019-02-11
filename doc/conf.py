@@ -245,9 +245,13 @@ html_theme_options = {
     "project_nav_name": "statscollection",
     # Path to a touch icon
     "touch_icon": "images/logos/statscollection_logo.png",
+    #'extra_scripts': ['_static/css/gallery.css']
 }
 
 
 def setup(app):
     # to hide/show the prompt in code examples:
     app.add_javascript("js/copybutton.js")
+
+    # This stylesheet overrides sphinx-gallery default styles
+    app.add_stylesheet("css/gallery.css")

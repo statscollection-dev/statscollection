@@ -14,11 +14,9 @@ https://rhettinger.wordpress.com/2010/02/06/lost-knowledge/
 https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.53
 """
 
-import math
-import functools
 import random
 import collections
-from .abstract_classes import OnlineStatistic, WeightedOnlineStatistic
+from .abstract_classes import OnlineStatistic
 
 
 class WindowedMean(OnlineStatistic):
@@ -147,8 +145,6 @@ def main():
 
 if __name__ == "__main__":
     main()
-
-    import itertools
 
     items = iter(range(50))
     sm = WindowedWeightedMean(n=10, k=2)

@@ -3,8 +3,8 @@
 """
 Classes containing algorithms for online statistics.
 """
-import math
 import functools
+import math
 from .abstract_classes import OnlineStatistic, WeightedOnlineStatistic
 
 
@@ -278,7 +278,6 @@ def main():
         args=[".", "--doctest-modules", "-v", "--disable-warnings", "--capture=sys"]
     )
 
-    import math
     import random
     import time
     import matplotlib.pyplot as plt

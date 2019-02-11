@@ -64,8 +64,8 @@ It's possible to...
 
 
 """
-from .classes import Mean, Max, Min
-from .sampling import Sample
+from statscollection.online.classes import Mean, Max, Min
+from statscollection.online.sampling import Sample
 
 Mean = Mean
 Max = Max

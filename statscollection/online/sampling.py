@@ -14,7 +14,7 @@ https://rhettinger.wordpress.com/2010/02/06/lost-knowledge/
 https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.53
 """
 import random
-from abstract_classes import OnlineStatistic
+from .abstract_classes import OnlineStatistic
 from scipy import stats
 import numpy as np
 

@@ -4,7 +4,11 @@
 Classes containing algorithms for online statistics.
 """
 import functools
-from .abstract_classes import OnlineStatistic, WeightedOnlineStatistic
+import math
+from statscollection.online.abstract_classes import (
+    OnlineStatistic,
+    WeightedOnlineStatistic,
+)
 
 
 class Mean(OnlineStatistic):

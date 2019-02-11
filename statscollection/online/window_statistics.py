@@ -16,7 +16,7 @@ https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.53
 
 import random
 import collections
-from .abstract_classes import OnlineStatistic
+from statscollection.online.abstract_classes import OnlineStatistic
 
 
 class WindowedMean(OnlineStatistic):

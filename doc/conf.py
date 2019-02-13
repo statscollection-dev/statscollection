@@ -16,6 +16,7 @@
 import os
 import statscollection
 import datetime
+
 YEAR = datetime.datetime.utcnow().year
 
 # -- Project information -----------------------------------------------------
@@ -67,16 +68,12 @@ extensions = [
 sphinx_gallery_conf = {
     # Path to your examples scripts
     "examples_dirs": "../examples",
-    
     # Path where to save gallery generated examples
     "gallery_dirs": "gallery_generated_examples",
-    
     # Modules for which function level galleries are created
     # "doc_module": "statscollection",
-    
     # Directory where function granular galleries are stored
     # "backreferences_dir": os.path.join("modules", "generated"),
-    
     "reference_url": {"statscollection": None},
     "download_all_examples": False,
 }

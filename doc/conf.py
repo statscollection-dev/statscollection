@@ -76,6 +76,7 @@ sphinx_gallery_conf = {
     
     # Directory where function granular galleries are stored
     # "backreferences_dir": os.path.join("modules", "generated"),
+    
     "reference_url": {"statscollection": None},
     "download_all_examples": False,
 }

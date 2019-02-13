@@ -15,11 +15,13 @@
 
 import os
 import statscollection
+import datetime
+YEAR = datetime.datetime.utcnow().year
 
 # -- Project information -----------------------------------------------------
 
 project = "statscollection"
-copyright = "2019, tommyod"
+copyright = "2019 - {}, tommyod".format(YEAR)
 author = "tommyod"
 
 # The short X.Y version
@@ -63,12 +65,17 @@ extensions = [
 
 # https://sphinx-gallery.readthedocs.io/en/latest/getting_started.html
 sphinx_gallery_conf = {
-    # path to your examples scripts
+    # Path to your examples scripts
     "examples_dirs": "../examples",
-    # path where to save gallery generated examples
-    "gallery_dirs": "auto_examples",
-    "doc_module": "statscollection",
-    "backreferences_dir": os.path.join("modules", "generated"),
+    
+    # Path where to save gallery generated examples
+    "gallery_dirs": "gallery_generated_examples",
+    
+    # Modules for which function level galleries are created
+    # "doc_module": "statscollection",
+    
+    # Directory where function granular galleries are stored
+    # "backreferences_dir": os.path.join("modules", "generated"),
     "reference_url": {"statscollection": None},
     "download_all_examples": False,
 }
@@ -233,7 +240,6 @@ epub_title = project
 
 html_theme_path = [os.path.join(os.path.abspath("."), "theme")]
 
-print(os.path.join(os.path.abspath("."), "theme"))
 html_theme = "guzzle_sphinx_theme"
 
 

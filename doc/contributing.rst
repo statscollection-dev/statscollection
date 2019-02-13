@@ -3,52 +3,63 @@
 Contributing
 ============
 
-Expert knowledge is not needed to contribute to *statscollection*.
-Every contribution is valuable, including:
+  Clean code, high-quality documentation and clear contribution guidelines will attract proficient developers.
+  
+Statscollection aims to be extremely *accessible to contributors*.
+Every meaningful contribution is welcome, this includes
 
-- Reporting bugs and `issues <https://github.com/statscollection-dev/statscollection/issues>`_ that you encounter while using the package.
-- Extending the documentation if the examples are incomplete or insufficient.
-- Reviewing code written by others---you will learn a lot.
-- Implementing new algorithms, if you're willing to read up on theory first.
+- **Documentation fixes** - spellchecking, rewriting, clarifying, extending, etc.
+- **Code reviews** - reviewing existing code, rewriting functions, improving algorithms, etc.
+- **Code contributions** - extending sub-packages or *creating your own sub-package*.
 
-Open source projects work best when people contribute actively.
-Together, we can create great software for others to use.
-This page describes how to contribute to the projects.
+Contributors may list their GitHub usernames or full names in the :ref:`contributors` section.
+High-quality contributions will give membership to the `statscollection-dev <https://github.com/statscollection-dev>`_ GitHub organization.
+
+This page explains how to create a pull request, how to contribute to the documentation, and how to contribute to the code.
 If you have trouble making a contribution, please create an `Issue <https://github.com/statscollection-dev/statscollection/issues>`_.
 
 Creating a Pull Request
 -----------------------
 
-To make any kind of contribution, you will need to create a Pull Request on `GitHub <https://github.com/>`_.
-Create a free account on GitHub if you have not done so already.
+In order to contribute, you have to create a pull request on `GitHub <https://github.com/>`_.
+Begin by creating a free account on GitHub if you have not done so already.
 If you are unfamiliar with git, read the introductory chapers of the `git book <https://git-scm.com/book/en/v2>`_ or search for YouTube tutorials.
-Below is a list explaining the steps needed to create a pull request, a terminal session is recorded below.
+Below is a list describing the steps needed to create a pull request.
 
 1. Fork the `statscollection <https://github.com/statscollection-dev/statscollection>`_ repository on GitHub. 
-   This copies the project on your GitHub profile.
+   This copies the project to your GitHub profile.
 #. Clone the fork to your local computer using ``git clone https://github.com/<YOUR_NAME>/statscollection.git``.
    This downloads the files to your computer.
-#. Add ``statscollection-dev/statscollection`` as a remote using ``asdf``.
-   This allows you to fetch the lastest changes from the main repository, so you don't fall behind.
-#. Create a feature branch.
-#. Make changes to the software, perform linting and run the tests.
+#. Add ``statscollection-dev/statscollection`` as a remote named 
+   *upstream* using ``git remote add upstream https://github.com/statscollection-dev/statscollection``.
+   This allows you to fetch the latest changes from the main repository, 
+   so you don't fall behind if the master branch is updated while you work.
+#. Create a feature branch for your work with ``git checkout -b my_feature``
+#. Make changes to the docs and software, perform linting, run the tests and build the docs.
 #. Commit your changes.
-#. Push the changes.
-#. Create a pull request.
+#. Merge any new commits from the master with ``git pull upstream master``.
+#. Push the changes to your fork using ``git push origin --set-upstream my_feature``.
+#. Create a pull request from ``https://github.com/<YOUR_NAME>/statscollection``.
+#. If you need to add more commits, simply commit, pull from upstream and push to your fork again.
 
-If you make significant contributions, you will be invited to join the development team.
-If you have made significant contributions but have not be invited, feel free to ask.
+.. tip::
+   When a pull request is created, the code will be tested and built.
+   To see the exact commands executed when the code is tested and built, 
+   read the `.travis.yml <https://github.com/statscollection-dev/statscollection/blob/master/.travis.yml>`_ file
+   in the main repository.
+
 
 Terminal session for a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Below is a terminal session for a Pull Request.
-Start by cloning the project to your GitHub account, downloading the files and adding a remote.
+A terminal session with comments in presented below.
+We start by cloning the project to our GitHub account, downloading the files and adding a remote.
 
 .. code-block:: console
 
+   $ git --version # git version 2.7.4
    $ git clone https://github.com/<YOUR_NAME>/statscollection.git
-   $ cd statscollection
+   $ cd statscollection # Change directory
    $ git remote add upstream https://github.com/statscollection-dev/statscollection.git
 
 Create a feature branch for your changes, make changes, test and commit.
@@ -67,6 +78,7 @@ Create a feature branch for your changes, make changes, test and commit.
 
 Documentation contributions
 ---------------------------
+
 
 Documentation contributions are arguably the most important contributions!
 
@@ -135,5 +147,15 @@ Building and deploying
 ----------------------
 
 Developer notes go here.
+
+
+Code ideas
+~~~~~~~~~~
+
+TODO
+
+.. code-block:: console
+
+   $ black .
 
 

@@ -55,7 +55,7 @@ script:
   - pip install doctr
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
   - doctr deploy --built-docs sphinx_docs_html 
-                 --deploy-repo statscollection-dev/statscollection-dev.github.io devel/
+                 --deploy-repo statscollection-dev/statscollection-dev.github.io devel
 
 
 

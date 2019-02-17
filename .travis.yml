@@ -39,6 +39,7 @@ install:
 
 
 # -------------------- script: run the build script ---------------------------
+  # ------------------ sdf
 before_script:
   - echo 'before script.'
 
@@ -49,13 +50,14 @@ script:
   - flake8 statscollection --select=F401 # Unused imports
   - pytest statscollection --verbose --doctest-modules # Run all tests
   
-  # Documentation time!
+  # ------------------ Move the built documentation to a GH repo --------------
   
   - set -e #  the `set -e` prevents doctr from running when the docs build fails.
   - pip install doctr
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
-  - doctr deploy --built-docs sphinx_docs_html 
-                 --deploy-repo statscollection-dev/statscollection-dev.github.io devel
+  - doctr deploy devel --built-docs sphinx_docs_html 
+                 --deploy-repo statscollection-dev/statscollection-dev.github.io 
+                 
 
 
 

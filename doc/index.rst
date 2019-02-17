@@ -45,7 +45,7 @@ Valuable contributions include (but are not limited to!):
 - **Code contributions** - extending sub-packages or *creating your own sub-package*.
 
 Contributors may list their full name or GitHub username in the :ref:`contributors` section below.
-Contributors which provide high-quality content will be given membership to the `statscollection-dev <https://github.com/statscollection-dev>`_ GitHub organization.
+Contributors providing high-quality content will be given membership to the `statscollection-dev <https://github.com/statscollection-dev>`_ GitHub organization.
 The primarily goal of this package is to collect various statistical functionality into a single package.
 For more information, see the :ref:`contributing` page.
 

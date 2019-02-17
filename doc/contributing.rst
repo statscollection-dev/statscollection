@@ -13,7 +13,7 @@ Valuable contributions include:
 - **Code contributions** - extending sub-packages or *creating your own sub-package*.
 
 Contributors may list their full name or GitHub username in the :ref:`contributors` section below.
-Contributors which provide high-quality content will be given membership to the `statscollection-dev <https://github.com/statscollection-dev>`_ GitHub organization.
+Contributors providing high-quality content will be given membership to the `statscollection-dev <https://github.com/statscollection-dev>`_ GitHub organization.
 
 This page explains how to create a pull request, how to contribute to the documentation, and how to contribute to the code.
 In addition to the text below, the following resources might be useful:
@@ -64,8 +64,8 @@ Below is a list describing the steps needed to create a pull request.
 Terminal session for a pull request
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-A terminal session with comments in presented below.
-We start by cloning the project to our GitHub account, downloading the files and adding a remote.
+A terminal session with comments is presented below.
+We start by cloning the project from our GitHub account, downloading the files and adding a remote.
 
 .. code-block:: console
 
@@ -109,7 +109,7 @@ You should still build the documentation locally and verify that it looks good.
 Building the docs
 ~~~~~~~~~~~~~~~~~
 
-Docs may be built the ``sphinx-build`` command.
+Docs may be built using the ``sphinx-build`` command.
 
 .. code-block:: console
 
@@ -129,7 +129,7 @@ Code contributions
 If you wish to contribute code, you have to
 
 1. Run formatting on the code via the `black <https://black.readthedocs.io/en/stable/>`_ code formatter.
-#. Write proper documentation and tests for the code, testing is done using `pytest <https://docs.pytest.org/en/latest/>`_.
+#. Write tests for the code, testing is done using `pytest <https://docs.pytest.org/en/latest/>`_.
 #. Document the code well, this project uses `numpydoc docstrings <https://numpydoc.readthedocs.io/en/latest/format.html>`_.
 #. Balance readability with performance.
    Readability has first priority, but if you `time the code <http://pynash.org/2013/03/06/timing-and-profiling/>`_ and identify bottlenecks, they should be optimized.
@@ -182,14 +182,14 @@ Developer notes go here.
 
 
 
-Code ideas
-~~~~~~~~~~
+Code contribution ideas
+~~~~~~~~~~~~~~~~~~~~~~~
 
 Below is a list of routines that would be nice to see implemented.
 
 - Bootstrapping and resampling functions.
 - Online statistics.
-- Kernel density estimators.
+- Kernel density estimators (copy implementation from KDEpy).
 - Kernel regression.
 - Other nonparametric routines.
 - Statistical tests, such as exact Mann–Whitney U test.

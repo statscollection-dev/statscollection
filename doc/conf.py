@@ -15,11 +15,14 @@
 
 import os
 import statscollection
+import datetime
+
+YEAR = datetime.datetime.utcnow().year
 
 # -- Project information -----------------------------------------------------
 
 project = "statscollection"
-copyright = "2019, tommyod"
+copyright = "2019 - {}, tommyod".format(YEAR)
 author = "tommyod"
 
 # The short X.Y version
@@ -36,9 +39,9 @@ smartquotes = True
 # e.g. for py:function directives. Default is True.
 add_module_names = True
 
-#html_logo = "images/statscollection_logo.png"
+# html_logo = "images/statscollection_logo.png"
 
-html_favicon = '_static/favicon.ico'
+html_favicon = "_static/favicon.ico"
 
 # -- General configuration ---------------------------------------------------
 
@@ -56,8 +59,25 @@ extensions = [
     "sphinx.ext.mathjax",
     "sphinx.ext.viewcode",
     "sphinx.ext.napoleon",
-    "sphinx.ext.autosummary", 
+    "sphinx.ext.autosummary",
+    "sphinx_gallery.gen_gallery",
 ]
+
+
+# https://sphinx-gallery.readthedocs.io/en/latest/getting_started.html
+sphinx_gallery_conf = {
+    # Path to your examples scripts
+    "examples_dirs": "../examples",
+    # Path where to save gallery generated examples
+    "gallery_dirs": "gallery_generated_examples",
+    # Modules for which function level galleries are created
+    # "doc_module": "statscollection",
+    # Directory where function granular galleries are stored
+    # "backreferences_dir": os.path.join("modules", "generated"),
+    "reference_url": {"statscollection": None},
+    "download_all_examples": False,
+}
+
 
 # http://www.sphinx-doc.org/en/master/usage/extensions/autosummary.html#generating-stub-pages-automatically
 autosummary_generate = True
@@ -218,7 +238,6 @@ epub_title = project
 
 html_theme_path = [os.path.join(os.path.abspath("."), "theme")]
 
-print(os.path.join(os.path.abspath("."), "theme"))
 html_theme = "guzzle_sphinx_theme"
 
 
@@ -229,10 +248,14 @@ html_theme_options = {
     # Set the name of the project to appear in the left sidebar.
     "project_nav_name": "statscollection",
     # Path to a touch icon
-    "touch_icon": "images/statscollection_logo.png",
+    "touch_icon": "images/logos/statscollection_logo.png",
+    #'extra_scripts': ['_static/css/gallery.css']
 }
 
 
 def setup(app):
     # to hide/show the prompt in code examples:
     app.add_javascript("js/copybutton.js")
+
+    # This stylesheet overrides sphinx-gallery default styles
+    app.add_stylesheet("css/gallery.css")

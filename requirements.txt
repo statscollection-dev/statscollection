@@ -17,6 +17,7 @@ pytest
 sphinx
 sphinx-gallery
 
-# For creating plots in documentation
+# For creating plots in documentation, the gallery, and image resizing
 matplotlib
-
+sphinx-gallery
+pillow

@@ -14,7 +14,7 @@ https://rhettinger.wordpress.com/2010/02/06/lost-knowledge/
 https://epubs.siam.org/doi/pdf/10.1137/1.9781611972740.53
 """
 import random
-from abstract_classes import OnlineStatistic
+from .abstract_classes import OnlineStatistic
 from scipy import stats
 import numpy as np
 
@@ -66,11 +66,10 @@ class Sample(OnlineStatistic):
     >>> for sample in sampler.yield_from(stream):
     ...   print(sample)
     [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
-    [2, 1, 1, 1, 2, 2, 1, 2, 1, 1]
-    [2, 1, 3, 1, 3, 3, 1, 3, 1, 1]
-    [4, 1, 3, 1, 3, 3, 1, 3, 4, 1]
-    [4, 1, 3, 1, 3, 3, 5, 3, 5, 1]
-
+    [2, 2, 1, 1, 2, 1, 2, 1, 1, 1]
+    [3, 2, 1, 1, 2, 1, 3, 1, 1, 1]
+    [3, 2, 1, 1, 2, 4, 3, 1, 4, 4]
+    [5, 2, 5, 1, 2, 5, 3, 1, 4, 4]
     
     References
     ----------
@@ -159,7 +158,6 @@ def timetest(n):
     np.random.seed(123)
     random.seed(123)
     estimator = Sample(num_samples=n, replace=True)
-    import collections
     import time
 
     st = time.perf_counter()

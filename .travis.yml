@@ -16,6 +16,12 @@ matrix:
       sudo: required
       services: docker
       python: '3.7'
+      
+      
+env:
+  global:
+    # Doctr deploy key for statscollection-dev/statscollection-dev.github.io
+    - secure: "JEgcAmktLl9OY+eR1W6IIpj9W1NJYZ11Di4y3I4XocQx+/dFiqJ22NKiD/CiwqpCxGG4h4O/2IincpruIdxvJsCvE882rBELPc6ief5R/A7+W4lImx2ENOo+cJ3w7RD9m3Z9+2oNEnKvYYUu2Wj1YGH3PYEzSppYzmQGlbRYDl9COi1kLOitxbt4CbqTy/z0wWhn99VO1yPwRx5OvpAo9/shkpU2b9hrxIz/nshyv/5Z8tk1lEBilYEutM8B9As7eneGbaMIGqd8kBi5YV1UdL7vIYQ43K3AO4EKRT1qpEnlDel+eaE619CfJc9tdOoYjwHPXtTuR9uO0Qte16KuZb8duOhIZWQGvIihtFF5IH6inBBwVWlSi6zmVinK3y0fqdMeycsBys9sJz2fJl5WMFm2/AWLX8UtEi5YgLEUj8+Juerd5uWutgVSkDX/hbh9PoP7LQOrGXx9jIlOJGBjrKCvRauLKpr/IiZ5zvrxjxmrkh8eYoNGYzLvX/+qCaVJHvxgALyuIVKFA1BLYhm6O6PeqDbYGFg8lsKRPEm5Zej9/Ja/0B8N6AS1dOzoRKw1tNaxT9w0gHVn9NHa6XvvOrH4J3ibUkWs92lE7aZiQJr9CtYIl/0iQG6xc0Cz+VKJt6DXBNp63JMOY5sEgNOa5Peyuifb6+5YaRa6JWR3oFg="
 
 
 # The Travis CI job lifecycle specifies the order of the commands below phases.
@@ -42,7 +48,14 @@ script:
   - black . --check # Check that code is formatted correctly w.r.t. black
   - flake8 statscollection --select=F401 # Unused imports
   - pytest statscollection --verbose --doctest-modules # Run all tests
+  
+  # Documentation time!
+  
+  - set -e #  the `set -e` prevents doctr from running when the docs build fails.
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
+  - doctr deploy --built-docs sphinx_docs_html 
+                 --deploy-repo statscollection-dev/statscollection-dev.github.io devel/
+
 
 
 # =============================================================================

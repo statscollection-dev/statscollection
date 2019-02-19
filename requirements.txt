@@ -15,7 +15,7 @@ black
 flake8
 
 # For running tests
-pytest
+pytest>=4.0.2
 
 # For building documentation
 sphinx

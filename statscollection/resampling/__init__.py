@@ -14,7 +14,7 @@ Docs go here.
 >>> medians = bootstrap_function(sleep, np.median, num_bootstraps=100, random_state=42)
 >>> ans = np.percentile(medians, q=[5, 95], interpolation='linear')
 >>> print(ans)
-[6.99... 8.03...]
+[6.99  8.03]
 >>> means = bootstrap_function(sleep, np.mean, num_bootstraps=1000, random_state=42)
 >>> ans = np.percentile(means, q=[1, 99], interpolation='linear')
 >>> print(ans)

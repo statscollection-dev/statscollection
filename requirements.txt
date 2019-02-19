@@ -6,6 +6,10 @@
 scipy
 numpy
 
+# Computations should not require pandas, but some functions
+# should support DataFrame and Series inputs
+pandas
+
 # For code formatting and linting
 black
 flake8

@@ -53,6 +53,7 @@ script:
   - set -e #  the `set -e` prevents doctr from running when the docs build fails.
   - pip install doctr
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
+  # Deploy the docs to the documentation repo, under the `master` folder
   - doctr deploy master --built-docs sphinx_docs_html 
                  --deploy-repo statscollection-dev/statscollection-dev.github.io 
                  

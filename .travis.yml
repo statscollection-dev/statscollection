@@ -17,7 +17,6 @@ matrix:
       services: docker
       python: '3.7'
       
-      
 env:
   global:
     # Doctr deploy key for statscollection-dev/statscollection-dev.github.io
@@ -39,7 +38,6 @@ install:
 
 
 # -------------------- script: run the build script ---------------------------
-  # ------------------ sdf
 before_script:
   - echo 'before script.'
 
@@ -55,11 +53,9 @@ script:
   - set -e #  the `set -e` prevents doctr from running when the docs build fails.
   - pip install doctr
   - sphinx-build doc sphinx_docs_html -a -E -W --keep-going -T # Warnings to errors
-  - doctr deploy devel --built-docs sphinx_docs_html 
+  - doctr deploy --built-docs sphinx_docs_html 
                  --deploy-repo statscollection-dev/statscollection-dev.github.io 
                  
-
-
 
 # =============================================================================
 # before_install
